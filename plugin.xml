@@ -30,8 +30,12 @@
         <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
             <string>This app needs photo library access</string>
         </config-file>
-        
-
+        <podspec>
+      
+        <pods use-frameworks="true">
+        <pod name="AFNetworking" spec="~> 3.2" />
+        </pods>
+        </podspec>
        
 	
         <source-file src="src/ios/IDnowPlugin.m" />
