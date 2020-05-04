@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-idnow" version="0.0.1" 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:tools="http://schemas.android.com/tools">
+    <name>IDnowPlugin</name>
+    <asset src="www/IDnowPlugin.js" target="js/IDnowPlugin.js"/>
+    <js-module name="IDnowPlugin" src="www/IDnowPlugin.js">
+        <clobbers target="IDnowPlugin" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="IDnowPlugin">
+                <param name="ios-package" value="IDnowPlugin" />
+            </feature>
+        </config-file>
+        
+
+       <preference name="CAMERA_USAGE_DESCRIPTION" default="This app needs camera access"/>
+        <config-file target="*-Info.plist" parent="NSCameraUsageDescription">
+            <string>$CAMERA_USAGE_DESCRIPTION</string>
+        </config-file>
+
+        <preference name="MICROPHONE_USAGE_DESCRIPTION" default="This app needs microphone access"/>
+        <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+            <string>$MICROPHONE_USAGE_DESCRIPTION</string>
+        </config-file>
+
+        <preference name="PHOTO_LIBRARY_DESCRIPTION" default="This app needs photo library access"/>
+        <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
+            <string>This app needs photo library access</string>
+        </config-file>
+        
+        <framework src="OpenCV2" type="podspec" spec="3.4.1" />
+		
+	<framework src="src/ios/sdk/IDNowSDKCore.framework" custom="true" embed="true" />
+	<framework src="src/ios/sdk/Alamofire.framework" custom="true" embed="true"/>
+	<framework src="src/ios/sdk/Lottie.framework" custom="true" embed="true"/>
+	<framework src="src/ios/sdk/Starscream.framework" custom="true" embed="true"/>
+	<framework src="src/ios/sdk/Sentry.framework" custom="true" embed="true"/>
+
+        <source-file src="src/ios/IDnowPlugin.m" />
+            
+    </platform>
+</plugin>
