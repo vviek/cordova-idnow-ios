@@ -40,7 +40,7 @@
         </podspec>
 
        
-	<framework src="src/ios/sdk/IDNowSDKCore.framework" custom="true" embed="true" />
+	
         <source-file src="src/ios/IDnowPlugin.m" />
             
     </platform>
