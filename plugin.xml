@@ -37,7 +37,11 @@
                 <source url="https://github.com/CocoaPods/Specs.git"/>
             </config>
             <pods use-frameworks="true">
-                <pod name="Starscream" spec="~> 3.1.0"/>
+                <pod name="Alamofire" spec="~> 4.7.1"/>
+                <pod name="Starscream" spec="3.1.0"/>
+                <pod name="OpenCV2" spec="~> 3.4.1"/>
+                <pod name="Sentry" git="https://github.com/getsentry/sentry-cocoa.git" spec="~> 3.4.1"/>
+                 <pod name="lottie-ios" />
             </pods>
         </podspec>
        
