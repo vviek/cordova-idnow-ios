@@ -4,7 +4,7 @@
     "cordova_name": "IDnowPlugin",
     "description": "IDnow cordova plugin",
     "cordova": {
-        "id": "cordova-plugin-idnow",
+        "id": "cordova-idnow-ios",
         "platforms": [
             "ios"
         ]
@@ -16,7 +16,7 @@
     "keywords": [
         "IDnow ID Verification",
         "IDnow plugin",
-        "cordova-plugin-idnow"
+        "cordova-idnow-ios"
     ],
     "author": "",
     "contributors": "",
