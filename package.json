@@ -18,10 +18,9 @@
         "IDnow plugin",
         "cordova-idnow-ios"
     ],
-    "author": "",
-    "contributors": "",
+    "author": "Apache Software Foundation",
     "licenses": [{
         "type": "MIT",
-        "url": ""
+        "url": "https://github.com/vviek/cordova-idnow-ios"
     }]
 }
