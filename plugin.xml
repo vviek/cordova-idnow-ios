@@ -30,24 +30,34 @@
         <config-file target="*-Info.plist" parent="NSPhotoLibraryUsageDescription">
             <string>This app needs photo library access</string>
         </config-file>
-      
-        <podspec>
+	
+		 
+		<podspec>
 			<config>
 				<source url="https://github.com/getsentry/sentry-cocoa.git" />
 				<source url="https://github.com/CocoaPods/Specs.git"/>
 			</config>
-		
-            <pods use-frameworks="true">
-                <pod name="Alamofire" spec="~> 4.7.1"/>
-                <pod name="Starscream" spec="3.1.0"/>
-                <pod name="OpenCV2" spec="~> 3.4.1"/>
-                <pod name="Sentry" spec="~> 4.1.0"/>
-                 <pod name="lottie-ios" />
-            </pods>
-
+			<pods use-frameworks="true">
+				<pod name="OpenCV2" spec="~> 3.4.1"/>
+                		<pod name="Alamofire" spec="~> 4.7"/>
+				<pod name="Starscream" spec="3.1.0"/>
+                		<pod name="Sentry" spec="4.1.0"/>
+				<pod name="lottie-ios"/>
+			</pods>
 		</podspec>
-        <source-file src="src/ios/IDnowPlugin.m" />
-        <framework src="src/ios/sdk/IDNowSDKCore.framework" custom="true" embed="true" />
+		
+		<framework src="src/ios/sdk/IDNowSDKCore.framework" custom="true" embed="true" />
+		<framework src="src/ios/sdk/Alamofire.framework" custom="true" embed="true"/>
+		<framework src="src/ios/sdk/Lottie.framework" custom="true" embed="true"/>
+		<framework src="src/ios/sdk/Starscream.framework" custom="true" embed="true"/>
+       	      	<framework src="src/ios/sdk/Sentry.framework" custom="true" embed="true"/>
 
+        <framework src="CoreGraphics.framework" />
+        <framework src="QuartzCore.framework" />
+        <framework src="Foundation.framework" />
+        <framework src="UIKit.framework" />
+	    
+        <source-file src="src/ios/IDnowPlugin.m" />
+            
     </platform>
 </plugin>
